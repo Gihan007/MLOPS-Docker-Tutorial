@@ -1,0 +1,49 @@
+
+**Install Docker Desktop**  
+1. Sign in to DockerHub and Docker Desktop  
+   - Docker Desktop:  
+     - Check if Docker is installed:  
+       ```sh
+       docker
+       ```  
+     - Pull the `hello-world` image and run it.  
+
+---
+
+**Docker Workflow**  
+
+1. Build a Docker Image  
+   ```sh
+   docker build -t mlops-docker-demo .
+   ```  
+
+2. Run the Docker Container  
+   ```sh
+   docker run -p 5000:5000 mlops-docker-demo
+   ```  
+
+3. Tag the Docker Image  
+   ```sh
+   docker tag mlops-docker-demo Gihan007/mlops-docker-demo:latest1
+   ```  
+
+4. Log in to DockerHub  
+   ```sh
+   docker login
+   ```  
+
+5. Push Image to DockerHub  
+   ```sh
+   docker push Gihan007/mlops-docker-demo:latest1
+   ```  
+
+6. Pull Image from DockerHub  
+   ```sh
+   docker pull Gihan007/mlops-docker-demo:latest1
+   ```  
+
+7. Run the Pulled Image  
+   ```sh
+   docker run -p 5000:5000 gihan007/mlops-docker-demo:latest1
+   ```  
+
